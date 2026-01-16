@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provefabrica - Catálogo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- model-viewer para AR web -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">PROVE FABRICA</div>
+    <nav>
+      <button id="menu-btn">☰</button>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <section id="banner">
+    <h1>Banner Inicial Llamativo</h1>
+  </section>
+
+  <!-- Presentación -->
+  <section id="presentacion">
+    <h2>Proveemos Oportunidades</h2>
+    <p>
+      En Provefabrica ofrecemos soluciones de mobiliario...
+    </p>
+  </section>
+
+  <!-- Categorías -->
+  <section id="categorias">
+    <h2>Nuestros productos</h2>
+    <div class="cards-categorias">
+      <div class="categoria">Categoría 1</div>
+      <div class="categoria">Categoría 2</div>
+      <div class="categoria">Categoría 3</div>
+    </div>
+  </section>
+
+  <!-- Botón Experiencia AR -->
+  <section>
+    <button id="btn-ar">Experiencia AR</button>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos">
+    <h2>Todos los productos</h2>
+    <div class="filtros">
+      <input type="text" id="busqueda" placeholder="Buscar...">
+      <select id="ordenar">
+        <option value="popularidad">Popularidad</option>
+        <option value="valoracion">Valoración Promedio</option>
+        <option value="nombre-asc">Nombre A-Z</option>
+        <option value="nombre-desc">Nombre Z-A</option>
+      </select>
+    </div>
+
+    <div id="grid-productos" class="grid-productos">
+      <!-- Productos se generan con JS -->
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
