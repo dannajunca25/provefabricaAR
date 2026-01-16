@@ -1,5 +1,5 @@
 const productos = [
-  { nombre: "Silla Erghohuman", img: "img/silla1.jpg", modelo3D: "models/silla1.glb" },
+  { nombre: "Silla Erghohuman", img: "img/silla1.jpg", modelo3D: "models/SNOW.usdz" },
   { nombre: "Silla Executive", img: "img/silla2.jpg", modelo3D: "models/silla2.glb" },
   { nombre: "Silla Comfort", img: "img/silla3.jpg", modelo3D: "models/silla3.glb" }
 ];
