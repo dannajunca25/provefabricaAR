@@ -7,6 +7,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #fff;
+  text-align: center;
 }
 
 /* HEADER */
@@ -23,18 +24,14 @@ header {
 
 .logo {
   color: #e30613;
-  font-weight: bold;
-  font-size: 1.1rem;
+
 }
 
-/* BANNER */
 #banner {
-  height: 160px;
-  background: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  min-height: 50vh;
+  background-image: url("../img/BANNER.png");
+  background-size: cover;
+  background-position: center;
 }
 
 /* SECCIONES */
@@ -42,26 +39,81 @@ section {
   padding: 16px;
 }
 
-/* CATEGORÍAS */
+#categorias {
+  padding: 40px 20px;
+}
+
 .cards-categorias {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .categoria {
+  position: relative;
   height: 120px;
-  background: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
+
+/* Overlay oscuro */
+.categoria .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+   opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.categoria h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.categoria p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.categoria:hover .overlay  {
+  opacity: 1;
+}
+
+.categoria.mesas {
+  background-image: url("../img/BANNER - MESAS.png");
+}
+
+.categoria.poltronas {
+  background-image: url("../img/BANNER-POLTRONAS.png");
+}
+
+.categoria.sillas {
+  background-image: url("../img/BANNER-SILLAS.png");
+}
+
+.categoria.butacos {
+  background-image: url("../img/BANNER-BUTACOS.png");
+}
+
+
 
 /* PRODUCTOS */
 .grid-productos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  padding-top: 25px;
 }
 
 .producto {
@@ -136,4 +188,69 @@ button {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+
+/* ===== MODAL DETALLE PRODUCTO ===== */
+
+.detalle-modal {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 9998;
+  overflow-y: auto;
+}
+
+.detalle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.detalle-header button {
+  background: none;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  color: #e30613;
+}
+
+.detalle-contenido {
+  padding: 20px;
+  text-align: left;
+}
+
+.detalle-contenido img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.medidas p {
+  margin: 4px 0;
+}
+
+.ar-info {
+  margin: 16px 0;
+  font-weight: bold;
+}
+
+.btn-detalle {
+  display: inline-block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #e30613;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none; /* quita subrayado */
 }

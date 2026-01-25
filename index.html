@@ -12,7 +12,7 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">PROVE FABRICA</div>
+    <div class="logo"><img src="img/logo-prove.webp"></div>
     <nav>
       <button id="menu-btn">☰</button>
     </nav>
@@ -20,26 +20,52 @@
 
   <!-- BANNER -->
   <section id="banner">
-    <h1>Banner Inicial Llamativo</h1>
+
   </section>
 
   <!-- Presentación -->
   <section id="presentacion">
     <h2>Proveemos Oportunidades</h2>
     <p>
-      En Provefabrica ofrecemos soluciones de mobiliario...
+     En Provefabrica, proveemos oportunidades porque sabemos que cada proyecto es un sueño en construcción. Nos enfocamos en importar, comercializar y fabricar la sillonería al por mayor, para que los resultados siempre superen las expectativas. <strong>¡Vamos juntos hacia el éxito! </strong>
     </p>
   </section>
 
   <!-- Categorías -->
   <section id="categorias">
-    <h2>Nuestros productos</h2>
-    <div class="cards-categorias">
-      <div class="categoria">Categoría 1</div>
-      <div class="categoria">Categoría 2</div>
-      <div class="categoria">Categoría 3</div>
+  <h2>Nuestros productos</h2>
+
+  <div class="cards-categorias">
+    <div class="categoria mesas">
+      <div class="overlay">
+        <h3>Mesas</h3>
+        <p>Mesas funcionales y decorativas para cualquier espacio.</p>
+      </div>
     </div>
-  </section>
+
+    <div class="categoria poltronas">
+      <div class="overlay">
+        <h3>Poltronas</h3>
+        <p>Confort y diseño pensados para el descanso.</p>
+      </div>
+    </div>
+
+    <div class="categoria sillas">
+      <div class="overlay">
+        <h3>Sillas</h3>
+        <p>Sillas ergonómicas y versátiles.</p>
+      </div>
+    </div>
+
+    <div class="categoria butacos">
+      <div class="overlay">
+        <h3>Butacos</h3>
+        <p>Ideales para barras y espacios informales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Botón Experiencia AR -->
   <section>
@@ -51,9 +77,16 @@
     <h2>Todos los productos</h2>
     <div class="filtros">
       <input type="text" id="busqueda" placeholder="Buscar...">
+
+      <select id="categoria">
+    <option value="todas">Todas las categorías</option>
+    <option value="Poltronas">Poltronas</option>
+    <option value="Butacos">Butacos</option>
+    <option value="Sillas">Sillas</option>
+    <option value="Mesas">Mesas</option>
+  </select>
+
       <select id="ordenar">
-        <option value="popularidad">Popularidad</option>
-        <option value="valoracion">Valoración Promedio</option>
         <option value="nombre-asc">Nombre A-Z</option>
         <option value="nombre-desc">Nombre Z-A</option>
       </select>
